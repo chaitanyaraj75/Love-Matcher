@@ -8,7 +8,6 @@ document.getElementById("btn").addEventListener("click",() => {
 
 function findLove() {
     if(findlove){
-        // alert("Please enter both names before calculating the love score.");
         const name1=document.getElementById("name1").value;
         const name2=document.getElementById("name2").value;
         if (name1 === "" || name2 === "") {
@@ -16,10 +15,18 @@ function findLove() {
         }
         let sum1 = 0, sum2 = 0;
         for (let i = 0; i < name1.length; i++) {
-            sum1 += name1.charCodeAt(i);
+            let charCode = name1.charCodeAt(i);
+            if ((charCode >= 65 && charCode <= 90) ||(charCode >= 97) && charCode <= 122){
+                charCode = charCode <= 90 ? charCode + 32 : charCode;
+            }
+            sum1 += charCode;
         }
         for (let i = 0; i < name2.length; i++) {
-            sum2 += name2.charCodeAt(i);
+            let charCode = name2.charCodeAt(i);
+            if ((charCode >= 65 && charCode <= 90) ||(charCode >= 97) && charCode <= 122){
+                charCode = charCode <= 90 ? charCode + 32 : charCode;
+            }
+            sum2 += charCode;
         }
         loveScore = Math.floor((sum1 + sum2) / 2) % 101;
         document.getElementById("result").innerHTML = `Love Score: ${loveScore}%`;
