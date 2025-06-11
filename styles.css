@@ -1,0 +1,66 @@
+body{
+    background-color: rgb(150, 17, 17);
+    background-image: url('./public/bg.png');
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-size: 7vw;
+    margin-top: 10vh;
+}
+
+.container {
+    width: 80%;
+    position: relative;
+    max-width: 600px;
+    margin: 3vh auto;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"]{
+    padding: 0.6vw;
+    background-color: rgba(169, 85, 17, 0.523);
+    border: 1px solid #ccc;
+    border-radius: 1vh;
+    font-size: 1.5em;
+    color: rgb(32, 134, 100);
+}
+
+button {
+    padding: 0.6vw;
+    margin-top: 1.3vh;
+    background-color: rgba(185, 109, 38, 0.852);
+    color: rgb(29, 46, 55);
+    border: none;
+    border-radius: 1vh;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 0vh;
+    width: 100%;
+    background-color: #470b0b89;
+    backdrop-filter: blur(5px);
+}
